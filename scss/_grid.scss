@@ -16,6 +16,7 @@ $grid-container-width: 1140px;
 
     [class*=col-]{
       width: 100%;
+      float: left;
     }
 
     @for $i from 1 through $grid-columns{
