@@ -1,4 +1,176 @@
 @import "grid";
 @import "reset";
 
+%circle{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border: 2px solid black;
+  border-radius: 50%;
+  bottom: -35px;
+  left:200px;
+}
+
+%images{
+  width: 30em;
+  height: 20em;
+  position: absolute;
+
+}
+
+%namePosition{
+  position: absolute;
+  bottom:-80px;
+  left:190px;
+  text-align: center;
+}
+
+
+@keyframes wysokosc {
+  0% { height: 0;}
+  50% { height: 20em;}
+  60%{height:14em;}
+  70% {height:20em;}
+  80% {height: 16em;}
+  90% {height:20em;}
+  95% {height:18em;}
+  100% {height: 20em}
+
+
+}
+
+
+
+.pictures {
+  height: 500px;
+  //width: 1600x;
+  float: left;
+
+  position: relative;
+  max-width: 100%;
+
+
+  div.row{
+    //width:100%;
+    //height:500px;
+
+  }
+
+
+  ul {
+    display: list-item;
+    list-style: none;
+    width: 100%;
+  }
+}
+
+
+
+div{
+  .mask {
+    width: 100%;
+    height: 20em;
+
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .plus{
+        height: 30px;
+        width:30px;
+        background: url("../images/plus.png")no-repeat  center top/cover;
+      }
+
+      animation-name:wysokosc;
+      animation-duration:0.8s;
+
+
+    }
+  }
+
+  .img1 {
+    @extend %images;
+    background: url("../images/4.jpg") no-repeat center top/cover;
+    }
+
+    .circle {
+      @extend %circle;
+      background: url("../images/4.png") no-repeat center top/cover;
+    }
+
+    .name {
+      @extend %namePosition
+    }
+  }
+
+  .img2 {
+    @extend %images;
+    background: url("../images/5.jpg") no-repeat center top/cover;
+    left: 30em;
+
+    .circle {
+      @extend %circle;
+      background: url("../images/3.png") no-repeat center top/cover;
+    }
+
+    .name {
+      @extend %namePosition
+    }
+
+  }
+  .img3 {
+    @extend %images;
+    background: url("../images/6.jpg") no-repeat center top/cover;
+    left: 60em;
+
+    .circle {
+      @extend %circle;
+      background: url("../images/2.png") no-repeat center top/cover;
+    }
+
+    .name {
+      @extend %namePosition
+    }
+
+  }
+  .img4 {
+    @extend %images;
+    background: url("../images/1.jpg") no-repeat center top/cover;
+    left: 90em;
+
+    .circle {
+      @extend %circle;
+      background: url("../images/1.png") no-repeat center top/cover;
+
+    }
+    .name {
+      @extend %namePosition
+    }
+
+  }
+ .img5 {
+   //display: none;
+    @extend %images;
+    background: url("../images/4.jpg") no-repeat center top/cover;
+    left: 120em;
+
+    .circle {
+      @extend %circle;
+      background: url("../images/3.png") no-repeat center top/cover;
+    }
+
+    .name {
+      @extend %namePosition
+    }
+  }
+
+
+.clearfix{
+  clear: both;
+  display: block;
+}
 
